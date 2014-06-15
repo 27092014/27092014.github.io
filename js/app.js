@@ -39,6 +39,7 @@
     $(function () {
         var $login = $('#login'),
             $password = $('#password'),
+            $button = $login.find('button'),
             cookieName = MD5('savedPassword'),
             password = 'a50f7baca6418ad439ad6ae09c0bad17';
 
@@ -50,24 +51,34 @@
 
         $password.focus();
 
-        $login
-            .find('button')
+        function _checkPassword() {
+            var val = $.trim($password.val());
+
+            if (val.length == 0) {
+                alert('Введите пароль :)');
+                return
+            }
+
+            if (MD5(val) === password) {
+                _init();
+                $login.remove();
+                $.cookie(cookieName, password, {path: '/', expires: 30})
+            } else {
+                alert('Вы ввели не правильный пароль :(');
+            }
+        }
+
+        $button
             .on('click', function (event) {
                 event.preventDefault();
+                _checkPassword()
+            });
 
-                var val = $.trim($password.val());
-
-                if (val.length == 0) {
-                    alert('Введите пароль :)');
-                    return
-                }
-
-                if (MD5(val) === password) {
-                    _init();
-                    $login.remove();
-                    $.cookie(cookieName, password, {path: '/', expires: 30})
-                } else {
-                    alert('Вы ввели не правильный пароль :(');
+        $password
+            .on('keyup', function (event) {
+                event.preventDefault();
+                if (event.keyCode == 13) {
+                    _checkPassword()
                 }
             });
     });
