@@ -8,15 +8,20 @@ body {
   background-attachment: fixed;
   background-size: 100%;
 
-  > h1 {
-    display: block;
-    text-align: center;
-    font-family: @logoFont;
-    font-size: 64px;
-    font-weight: normal;
-    line-height: 200px;
-    color: #000;
+  > .main {
+    > .page1 {
+      > h1 {
+        display: block;
+        text-align: center;
+        font-family: @logoFont;
+        font-size: 64px;
+        font-weight: normal;
+        line-height: 200px;
+        color: #000;
+      }
+    }
   }
 }
 
+@import 'inc/onePageScroll';
 @import url('http://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic');
