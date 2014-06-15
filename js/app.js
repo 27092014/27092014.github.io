@@ -4,6 +4,8 @@
 
 (function () {
 
+    location.hash = '';
+
     function _init() {
         // Scroller
         var $main = $('.main');
@@ -14,8 +16,8 @@
 
         function initialize() {
             var mapOptions = {
-                center: new google.maps.LatLng(-34.397, 150.644),
-                zoom: 8,
+                center: new google.maps.LatLng(55.678737, 37.533003),
+                zoom: 17,
                 scrollwheel: false
             };
 
@@ -25,7 +27,11 @@
             );
         }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
+        if ('undefined' == typeof(google)) {
+            google.maps.event.addDomListener(window, 'load', initialize);
+        } else {
+            initialize()
+        }
     }
 
     $(function () {

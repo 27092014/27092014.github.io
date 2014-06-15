@@ -44,15 +44,18 @@ body {
       > input#password {
         border: 1px solid #666666;
         border-right: 0;
-        width: 70%
+        .border-radius(0,0,10px,10px);
+        padding: 0 0 0 10px;
+        width: 288px
       }
 
       > button {
         border: 1px solid #666666;
         border-left: 1px dotted #666666;
-        width: 29%;
+        width: 100px;
         padding-right: 20px;
         padding-left: 20px;
+        .border-radius(10px,10px,0,0)
       }
     }
   }
@@ -105,8 +108,19 @@ body {
 
     > .page2 {
       background: url('/img/bg-page2.jpg') left top no-repeat;
-      background-attachment: fixed;
       background-size: 100%;
+
+      >div{
+        float: right;
+        max-width: 34%;
+        margin: 4% 4% 0 0;
+        padding: 14px;
+        background: rgba(255, 255, 255, .7);
+        text-align: center;
+        .border-radius(20px, 20px, 20px, 20px);
+        .box-shadow(0 0 4px #cccccc);
+        font: 170% @logoFont;
+      }
     }
   }
 }
