@@ -29,7 +29,6 @@
     }
 
     $(function () {
-
         var $login = $('#login'),
             $password = $('#password'),
             cookieName = MD5('savedPassword'),
@@ -40,6 +39,8 @@
             $login.remove();
             return
         }
+
+        $password.focus();
 
         $login
             .find('button')
@@ -61,7 +62,5 @@
                     alert('Вы ввели не правильный пароль :(');
                 }
             });
-
     });
-
 })();

@@ -32,11 +32,25 @@ body {
 
       > input#password,
       > button {
-        display: inline-block;
+        float: left;
+        display: block;
         font: 20px @logoFont;
+        border: 0;
+        outline-width: 0;
+        padding:0;
+        margin: 0;
+      }
+
+      > input#password {
+        border: 1px solid #666666;
+        border-right: 0;
+        width: 70%
       }
 
       > button {
+        border: 1px solid #666666;
+        border-left: 1px dotted #666666;
+        width: 29%;
         padding-right: 20px;
         padding-left: 20px;
       }
