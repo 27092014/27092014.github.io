@@ -9,7 +9,9 @@
     function _init() {
         // Scroller
         var $main = $('.main');
-        $main.onepage_scroll();
+        $main.onepage_scroll({
+            responsiveFallback: false
+        });
 
         // Google maps
         var map;
