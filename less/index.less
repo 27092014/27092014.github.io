@@ -11,9 +11,12 @@ body {
       background-size: 100%;
 
       > div {
-        width: 30%;
         float: right;
-        margin: 0 2% 0 0;
+        max-width: 40%;
+        margin: 4% 4% 0 0;
+        padding: 4%;
+        background: rgba(255, 255, 255, .7);
+        .border-radius(20px, 20px, 20px, 20px);
         text-align: center;
 
         > h1 {
@@ -22,8 +25,9 @@ body {
           font-family: @logoFont;
           font-weight: normal;
           color: #000;
-          font-size: 500%;
+          font-size: 400%;
           line-height: 340%;
+          margin: 0 4% 0 4%;
         }
 
         > div {
@@ -31,6 +35,10 @@ body {
 
           > span {
             display: block;
+          }
+
+          > span.date {
+            font-weight: bold;
           }
         }
       }
