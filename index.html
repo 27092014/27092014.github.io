@@ -14,9 +14,7 @@
             <h1>
                 <nobr>Сёма и Юля</nobr>
             </h1>
-
-            <img src="/img/us.jpg"
-                 alt="Сёма и Юля">
+            <img src="/img/us.jpg" alt="Сёма и Юля">
 
             <div>
                 <span>Если ты зашел на эту страничку,</span>
@@ -27,12 +25,20 @@
             </div>
         </div>
     </section>
-    <section class="page2">
-
-    </section>
+    <section class="page2" id="map"></section>
 </div>
-<script src="/js/lib/jquery.js" defer></script>
-<script src="/js/lib/jquery.one-page-scroll.js" defer></script>
-<script src="/js/app.js" defer></script>
+<div id="login">
+    <div>
+        <label for="password">Введите пароль</label>
+        <input id="password" type="password">
+        <button>Войти</button>
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANNvHAxqcyrK5hGnibwFI1nNMQRxwkeZ4"></script>
+<script src="/js/lib/md5.js"></script>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/jquery.cookie.js"></script>
+<script src="/js/lib/jquery.one-page-scroll.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>
